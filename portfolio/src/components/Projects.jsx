@@ -10,21 +10,21 @@ const projects =[
         name:"Employee MS",
         technologies :"MERN Stack",
         image : Project1,
-        github: "https://github.com/dhanshri",
+        github: "https://github.com/Dhanshripawade/PersonalPortfolioDhanshri",
     },
     {
         id:2,
         name:"Blog App",
         technologies :"MERN Stack",
         image : Project2,
-        github: "https://github.com/dhanshri",
+        github: "https://github.com/Dhanshripawade/PersonalPortfolioDhanshri",
     },
     {
         id:3,
         name:"Book MS",
         technologies :"MERN Stack",
         image : Project3,
-        github: "https://github.com/dhanshri",
+        github: "https://github.com/Dhanshripawade/PersonalPortfolioDhanshri",
     },
 ]
 const Projects = () => {
