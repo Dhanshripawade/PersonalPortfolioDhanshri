@@ -8,15 +8,12 @@ function Contact() {
       <div className='container px-8 mx-auto md:px-16 lg:px-24'>
         <h2 className='mb-12 text-4xl font-bold text-center'> Contact Me</h2>
         <div className='flex flex-col items-center md:flex-row md:space-x-12'>
-
-          <div className='flex-1 text-start'>
-
-
-            <h3 className='mb-4 text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500'>Let's Talk</h3>
+         <div className='flex-1 text-start'>
+         <h3 className='mb-4 text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500'>Let's Talk</h3>
             <p> I'm open to discussing web development projects or partnership opportunities.</p>
             <div className='mt-8 mb-4'>
-              <FaEnvelope className="inline-block mr-2 text-green-400"></FaEnvelope>
-              <a href="mailto:youremail@example.com" className='hover:underline'>dhanshripawade2002@gmail.com</a>
+            <FaEnvelope className="inline-block mr-2 text-green-400"></FaEnvelope>
+            <a href="mailto:youremail@example.com" className='hover:underline'>dhanshripawade2002@gmail.com</a>
             </div>
             <div className='mb-4 '>
               <FaPhone className="inline-block mr-2 text-green-400"></FaPhone>
@@ -26,9 +23,6 @@ function Contact() {
               <FaMapMarkedAlt className="inline-block mr-2 text-green-400"></FaMapMarkedAlt>
               <span>At Satgaon (Ridhora), Butibori</span>
             </div>
-
-
-
           </div>
           <div className='flex-1 w-full text-start'>
             <form className='space-y-4'>

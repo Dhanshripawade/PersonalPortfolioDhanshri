@@ -28,16 +28,16 @@ function Navbar() {
     { id: 3, text: "Services", path: "/services" },
     { id: 4, text: "projects", path: "/projects" },
     { id: 5, text: "Contact", path: "/contact" },
-  ];
+                ];
 
-  return (
+      return (
     <div className="px-3 bg-black ">
       <motion.div
         initial={{ opacity: 1, y: -100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         className="container items-center justify-between hidden py-6 mx-auto md:flex"
-      >
+          >
         <Link to="/">
         <div className="flex items-center gap-1 text-xl font-bold lg:text-2xl">
           <span className="text-white">Dhanshri</span>
@@ -93,9 +93,9 @@ function Navbar() {
           animate={{ opacity: 1, x: 0, y: 0 }}
           transition={{ duration: 0.5 }}
           className="flex items-center gap-2 px-4 py-6 text-xl font-bold"
-        >
+             >
           <span className="text-white">Dhanshri</span>
-          {/* <span className="text-purple-500">Saf</span> */}
+       
         </motion.div>
         </Link>
       </div>
