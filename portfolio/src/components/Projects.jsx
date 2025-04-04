@@ -43,7 +43,7 @@ const Projects = () => {
                             <p className='mb-4 text-gray-400'> {projects.technologies}</p>
                             <a href={projects.github} className='inline-block px-4 py-2 text-white rounded-full bg-gradient-to-r from-green-400 to-blue-500' target='_blank'
                             rel='noopener noreferrer'>GitHub</a>
-                            </div>
+                        </div>
                     ))}
                 </div>
 
