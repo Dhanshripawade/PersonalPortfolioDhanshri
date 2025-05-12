@@ -5,6 +5,7 @@ import About from './About';
 import Service from './Service';
 import Projects from './Projects';
 import Contact from './Contact';
+import Education from './Education';
 
 function Hero() {
   return (
@@ -51,7 +52,7 @@ function Hero() {
         viewport={{ once: false, amount: 0.3}}
       >
         I'm{" "}
-        <span className="text-transparent bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text">
+        <span className="text-transparent bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text ">
           Dhanshri Pawade
         </span>
         , Front-End Developer
@@ -98,19 +99,19 @@ function Hero() {
         transition={{ duration: 0.8 }}
         viewport={{ once: false, amount: 0.3}}
       >
-        <About className='mt-5' />
+        <About />
       </motion.div>
 
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        viewport={{ once:false, amount: 0.3 }}
-      >
-        <Service />
-      </motion.div>
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, delay: 0.2}}
+  viewport={{ once: false, amount: 0.3 }}
+>
+  <Education />
+</motion.div>
 
-      <motion.div
+<motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.4 }}
@@ -122,21 +123,23 @@ function Hero() {
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        viewport={{ once:false, amount: 0.3 }}
+      >
+        <Service />
+      </motion.div>
+
+     
+
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.6 }}
         viewport={{ once: false, amount: 0.3 }}
       >
         <Contact />
       </motion.div>
-      {/* Scroll Indicator
-      <motion.div
-        className="mt-10 text-gray-400 animate-bounce"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5 }}
-      >
-        <a href="#about">↓ Scroll Down</a>
-        
-      </motion.div> */}
+   
     </motion.div>
   );
 }

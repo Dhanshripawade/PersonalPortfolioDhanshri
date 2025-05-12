@@ -7,6 +7,7 @@ import Service from './components/Service';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './layout/Footer';
+import Education from './components/Education';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Hero />} />
         <Route path="/about" element={<About />} />
+        <Route path="/education" element={<Education />} />
         <Route path="/services" element={<Service />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />

@@ -7,24 +7,24 @@ import Project3 from "../assets/project3.jpg"
 const projects =[
     {
         id:1,
-        name:"Employee MS",
-        technologies :"MERN Stack",
+        name:"Admin Panel",
+        technologies :"React+Bootstrap",
         image : Project1,
-        github: "https://github.com/Dhanshripawade/PersonalPortfolioDhanshri",
+        github: "https://github.com/Dhanshripawade/AdminPanel",
     },
     {
         id:2,
-        name:"Blog App",
-        technologies :"MERN Stack",
+        name:"Personal Portfolio",
+        technologies :"React+Tailwend.Css",
         image : Project2,
         github: "https://github.com/Dhanshripawade/PersonalPortfolioDhanshri",
     },
     {
         id:3,
-        name:"Book MS",
-        technologies :"MERN Stack",
+        name:"Simple Website",
+        technologies :"React+Bootstrap",
         image : Project3,
-        github: "https://github.com/Dhanshripawade/PersonalPortfolioDhanshri",
+        github: "https://github.com/Dhanshripawade/SimaplWebSite-/tree/main/web",
     },
 ]
 const Projects = () => {
@@ -38,8 +38,8 @@ const Projects = () => {
                     {projects.map(projects => (
                         <div key={projects.id}
                             className='px-6 pb-6 transition duration-300 transform bg-gray-800 rounded-lg hover:shadow-lg-transfrom hover:scale-105'> 
-                            <img src={projects.image} alt={projects.name} className='object-cover w-full h-48 mb-4 rounded-lg' /> 
-                            <h3 className='mb-2 text-2xl font-bold'> {projects.name}</h3>
+                            <img src={projects.image} alt={projects.name} className='w-full h-48 m-2 mb-4 p2 img-fluid ' /> 
+                            <h3 className='mb-2 text-2xl font-bold '> {projects.name}</h3>
                             <p className='mb-4 text-gray-400'> {projects.technologies}</p>
                             <a href={projects.github} className='inline-block px-4 py-2 text-white rounded-full bg-gradient-to-r from-green-400 to-blue-500' target='_blank'
                             rel='noopener noreferrer'>GitHub</a>
