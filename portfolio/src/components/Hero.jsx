@@ -14,25 +14,24 @@ function Hero() {
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
-      viewport={{ once: false, amount: 0.3}}
     >
-      
+      {/* Animated background */}
       <motion.div
         className="absolute top-0 left-0 w-full h-full -z-10"
         animate={{
           background: [
             'linear-gradient(90deg, #000000, #111111)',
             'linear-gradient(90deg, #111111, #000000)',
-          ]
+          ],
         }}
         transition={{
           repeat: Infinity,
-          repeatType: "mirror",
-          duration: 10
+          repeatType: 'mirror',
+          duration: 10,
         }}
       />
 
-      
+      {/* Profile image */}
       <motion.img
         src={Image}
         alt="Profile"
@@ -40,42 +39,38 @@ function Hero() {
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, delay: 0.3 }}
-        viewport={{ once: false, amount: 0.3}}
       />
 
-  
+      {/* Name & role */}
       <motion.h1
         className="mt-5 text-4xl font-bold"
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, delay: 0.5 }}
-        viewport={{ once: false, amount: 0.3}}
       >
-        I'm{" "}
-        <span className="text-transparent bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text ">
+        I'm{' '}
+        <span className="text-transparent bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text">
           Dhanshri Pawade
         </span>
         , Front-End Developer
       </motion.h1>
 
-    
+      {/* Description */}
       <motion.p
-        className="mt-8 tex-gray-400 tex8t-lg"
+        className="mt-8 text-lg text-gray-400"
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, delay: 0.7 }}
-        viewport={{ once: false, amount: 0.3}}
       >
         I specialize in building modern and responsive applications.
       </motion.p>
 
-      
+      {/* Buttons */}
       <motion.div
         className="mt-8 space-x-4"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, delay: 1 }}
-        viewport={{ once: false, amount: 0.3}}
       >
         <motion.a
           className="px-4 py-2 text-white rounded-full bg-gradient-to-r from-green-400 to-blue-500 hover:scale-110"
@@ -93,53 +88,18 @@ function Hero() {
         </motion.a>
       </motion.div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: false, amount: 0.3}}
-      >
-        <About />
-      </motion.div>
-
-      <motion.div
-  initial={{ opacity: 0, y: 50 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8, delay: 0.2}}
-  viewport={{ once: false, amount: 0.3 }}
->
-  <Education />
-</motion.div>
-
-<motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.4 }}
-        viewport={{ once: false, amount: 0.3 }}
-      >
-        <Projects />
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        viewport={{ once:false, amount: 0.3 }}
-      >
-        <Service />
-      </motion.div>
-
-     
-
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.6 }}
-        viewport={{ once: false, amount: 0.3 }}
-      >
-        <Contact />
-      </motion.div>
-   
+      {/* Section Components */}
+      {[About, Education, Projects, Service, Contact].map((Component, idx) => (
+        <motion.div
+          key={Component.name}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 * idx }}
+          viewport={{ once: false, amount: 0.3 }}
+        >
+          <Component />
+        </motion.div>
+      ))}
     </motion.div>
   );
 }

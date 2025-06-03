@@ -1,56 +1,94 @@
-import React from 'react'
-import Project1 from "../assets/project1.jpg"
-import Project2 from "../assets/project2.jpg"
-import Project3 from "../assets/project3.jpg"
+import React from "react";
+import Project1 from "../assets/project1.jpg";
+import Project2 from "../assets/project2.jpg";
+import Project3 from "../assets/project3.jpg";
 
+const projects = [
+  {
+    id: 1,
+    name: "Admin Panel",
+    description: "Dashboard with CRUD, charts, and responsive layout.",
+    technologies: "React, Bootstrap",
+    image: Project1,
+    github: "https://github.com/Dhanshripawade/AdminPanel",
+    liveDemo: "https://adminpanel-2mwu.onrender.com/",
+  },
+  {
+    id: 2,
+    name: "Portfolio Website",
+    description: "My personal responsive portfolio site built with React.",
+    technologies: "React, Tailwind CSS",
+    image: Project2,
+    github: "https://github.com/Dhanshripawade/PersonalPortfolioDhanshri",
+    liveDemo: "",
+  },
+  {
+    id: 3,
+    name: "Simple Web Template",
+    description: "Multi-page template site with clean Bootstrap UI.",
+    technologies: "React, Bootstrap",
+    image: Project3,
+    github: "https://github.com/Dhanshripawade/SimaplWebSite-/tree/main/web",
+    liveDemo: "",
+  },
+];
 
-const projects =[
-    {
-        id:1,
-        name:"Admin Panel",
-        technologies :"React+Bootstrap",
-        image : Project1,
-        github: "https://github.com/Dhanshripawade/AdminPanel",
-    },
-    {
-        id:2,
-        name:"Personal Portfolio",
-        technologies :"React+Tailwend.Css",
-        image : Project2,
-        github: "https://github.com/Dhanshripawade/PersonalPortfolioDhanshri",
-    },
-    {
-        id:3,
-        name:"Simple Website",
-        technologies :"React+Bootstrap",
-        image : Project3,
-        github: "https://github.com/Dhanshripawade/SimaplWebSite-/tree/main/web",
-    },
-]
 const Projects = () => {
-    return (
-        <div className='py-20 text-white bg-black' id='about'>
-            <div className='container px-8 mx-auto md:px-16 lg:px-24'>
-                <h2 className='mb-12 text-4xl font-bold text-center'>
-                    My Projects
-                </h2>
-                <div className='grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3'>
-                    {projects.map(projects => (
-                        <div key={projects.id}
-                            className='px-6 pb-6 transition duration-300 transform bg-gray-800 rounded-lg hover:shadow-lg-transfrom hover:scale-105'> 
-                            <img src={projects.image} alt={projects.name} className='w-full h-48 m-2 mb-4 p2 img-fluid ' /> 
-                            <h3 className='mb-2 text-2xl font-bold '> {projects.name}</h3>
-                            <p className='mb-4 text-gray-400'> {projects.technologies}</p>
-                            <a href={projects.github} className='inline-block px-4 py-2 text-white rounded-full bg-gradient-to-r from-green-400 to-blue-500' target='_blank'
-                            rel='noopener noreferrer'>GitHub</a>
-                        </div>
-                    ))}
+  return (
+    <section className="py-20 text-white bg-black" id="projects">
+      <div className="max-w-6xl px-4 mx-auto">
+        <h2 className="mb-12 text-4xl font-bold text-center">My Projects</h2>
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+          {projects.map((project) => (
+            <div
+              key={project.id}
+              className="overflow-hidden bg-gray-900 border border-gray-800 shadow-xl rounded-xl"
+            >
+              {/* Image */}
+              <img
+                src={project.image}
+                alt={project.name}
+                className="object-cover w-full h-60"
+              />
+
+              {/* Content Below Image */}
+              <div className="p-4 text-center">
+                <h3 className="mb-2 text-xl font-bold text-white">
+                  {project.name}
+                </h3>
+                <p className="mb-2 text-sm text-gray-300">
+                  {project.description}
+                </p>
+                <p className="mb-4 text-xs text-gray-400">
+                  {project.technologies}
+                </p>
+                <div className="flex justify-center space-x-4">
+                  <a
+                    href={project.github}
+                    className="px-4 py-1 text-sm text-white bg-green-600 rounded-full hover:bg-green-700"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    GitHub
+                  </a>
+                  {project.liveDemo && (
+                    <a
+                      href={project.liveDemo}
+                      className="px-4 py-1 text-sm text-white bg-blue-500 rounded-full hover:bg-blue-600"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Live Demo
+                    </a>
+                  )}
                 </div>
-
+              </div>
             </div>
+          ))}
         </div>
+      </div>
+    </section>
+  );
+};
 
-    )
-}
-
-export default Projects
+export default Projects;
