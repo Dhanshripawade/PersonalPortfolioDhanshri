@@ -27,7 +27,7 @@ function Navbar() {
     { id: 5, text: "Projects", path: "/projects", icon: <FaProjectDiagram /> },
     
     { id: 4, text: "Services", path: "/services", icon: <FaTools /> },
-    { id: 6, text: "Contact", path: "/contact", icon: <FaEnvelope /> },
+    { id: 6, text: "Experience", path: "/experience", icon: <FaEnvelope /> },
   ];
 
   return (

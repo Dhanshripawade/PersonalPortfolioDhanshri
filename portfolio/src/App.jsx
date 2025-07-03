@@ -8,6 +8,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './layout/Footer';
 import Education from './components/Education';
+import Experience from './components/Experience';
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
         <Route path="/services" element={<Service />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/experience" element={<Experience />} />
+
       </Routes>
       <Footer />
     </Router>
